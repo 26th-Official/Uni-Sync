@@ -1,0 +1,31 @@
+{
+
+  "manifest_version": 2,
+  "name": "Uni-Sync",
+  "version": "1.0",
+
+  "description": "Sync Tabs and Bookmarks across all your different browser",
+
+  "icons": {
+    "48": "Sync_Icon.png"
+  },
+
+
+  "permissions": [
+    "bookmarks",
+    "tabs"
+  ],
+
+  "browser_action": {
+  "default_icon": "Sync_Icon.png",
+  "default_title": "Uni-Sync",
+  "default_popup": "Uni-Sync.html",
+  "browser_style": true
+  },
+
+
+  "background": {
+    "scripts": ["main.js"]
+  }
+
+}
