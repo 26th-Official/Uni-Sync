@@ -1,13 +1,55 @@
-body{
-    width: 500px;
-    height: 300px;
-    background-color: rgb(26, 26, 26);
-    color: white;
+:root{
+    --space: #262e2f;
+    --acapulco: #7fb59e;
+    --tapa: #7d7872;
+    --gray: #545451;
+    --manatee: #90949c;
+    --corduroy: #5e716d;
+    --shuttle-gray: #5e646c;
+    --brown-rust: #a56c37;
 }
 
-h1{
+
+
+body{
+    width: 220px;
+    height: 350px;
+    background-color: var(--space);
     color: white;
+    padding: 3% 4% 4% 4%;
 }
+
+h3{
+    font-size: 10px;
+}
+
+h5{
+    font-size: 10px;
+    line-height: 1.8;
+}
+
+
+
+.active_tab{
+    height: 20px;
+    background-color: var(--gray);
+    border-radius: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    width: 210px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.toggle{
+    display: inline;
+}
+
+.logo{
+    width: 20px;
+    display: inline-block;
+}
+
 
 .hidden{
     display: none;
