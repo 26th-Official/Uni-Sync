@@ -5,15 +5,21 @@ function logTabs(tabs) {
 
     for (const tab of tabs) {
       urls.push(tab.url)
-      const node = document.createTextNode(tab.url)
+      const node = document.createTextNode(tab.title)
       const tr = document.createElement("tr")
+      const td = document.createElement("td")
       const div = document.createElement("div")
-      div.classList.add("active_tab")
+      const a = document.createElement("a")
       const h5 = document.createElement("h5")
 
+      div.setAttribute("class","active_tab")
+      a.setAttribute("href",tab.url)
+      
       h5.appendChild(node)
-      div.appendChild(h5)
-      tr.appendChild(div)
+      a.appendChild(h5)
+      div.appendChild(a)
+      td.appendChild(div)
+      tr.appendChild(td)
       
       element.appendChild(tr)
     }
