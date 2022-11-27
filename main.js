@@ -1,10 +1,17 @@
-let urls=[]
+import { MongoClient } from "mongodb";
+// const { MongoClient, ServerApiVersion } = require('mongodb');
 
+const uri = "mongodb+srv://Sample:Qwerty123@uni-sync.ebaobdx.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+
+let urls=[]
 function logTabs(tabs) {
     const element = document.getElementById("tab_table")
 
     for (const tab of tabs) {
       urls.push(tab.url)
+
+
       const node = document.createTextNode(tab.title)
       const tr = document.createElement("tr")
       const td = document.createElement("td")
@@ -23,6 +30,20 @@ function logTabs(tabs) {
       
       element.appendChild(tr)
     }
+
+    obj = {
+      "username":"Sairam",
+      "URLs":urls
+    }
+
+    console.log(obj)
+    client.connect(err => {
+      obj = {}
+      const collection = client.db("UniSYNC").collection("Users");
+      collection.insertOne(obj)
+      // perform actions on the collection object
+      client.close()
+    });
   }
   
 
