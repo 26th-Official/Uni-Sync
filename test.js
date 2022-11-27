@@ -33,7 +33,7 @@ var config = {
       "database":"UniSYNC",
       "dataSource":"Uni-SYNC",
       "document": {
-        "text": "Hello from the Data API!",
+        "Dude": "Hello from the Data API!",
     }
     }
 };
@@ -45,3 +45,5 @@ axios(config)
     .catch(function (error) {
         console.log(error);
     });
+
+
