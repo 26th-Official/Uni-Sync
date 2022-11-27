@@ -1,0 +1,16 @@
+curl --request POST \
+  'https://data.mongodb-api.com/app/data-kcqqe/endpoint/data/v1/action/insertOne' \
+  --header 'Content-Type: application/json' \
+  --header 'Access-Control-Request-Headers: *' \
+  --header 'api-key: ON7CfbL2PTB2I1RINIeWdwLgxu38aZY2g2ff21PNJZPxrFkCF8u866kAyuL8Akyx' \
+  --data-raw '{
+      "collection":"Users",
+      "database":"UniSYNC",
+      "dataSource":"Uni-SYNC",
+      "document": {
+        "text": "Hello from the Data API!",
+      }
+  }'
+
+
+  
